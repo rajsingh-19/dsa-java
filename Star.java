@@ -39,8 +39,15 @@ public class Star {
 
         // printPattern15(5);
 
-        printPattern16(5);
-    }
+        // printPattern16(5);
+
+        // printPattern17(4);
+
+        // printPattern18(5);
+
+        printPattern19(6);
+
+    };
 
     //          * * * *
     //          * * * *
@@ -344,4 +351,128 @@ public class Star {
             System.out.println();
         };
     };
+
+    //              A
+    //             ABA
+    //            ABCBA
+    //           ABCDCBA
+    public static void printPattern17(int n) {
+        for(int i=1; i<=n; i++) {
+            //          left side --- a, ab, abc, abcd
+            int x = 65;
+            //  spaces
+            for(int j=1; j<=(n-i); j++) {
+                System.out.print(" ");
+            };
+            //  letters
+            for(int k=1; k<=i; k++) {
+                char letter = (char) x;
+                System.out.print(letter);
+                x++;
+            };
+
+            //           right side --- _, a, ba, cba
+            // letters
+            x -= 2;             // adjust the start to the second last letter
+            for(int j=1; j<=(i-1); j++) {
+                char letter = (char) x;
+                System.out.print(letter);
+                x--;
+            };
+            System.out.println();
+        };
+    };
+
+    //              E
+    //              DE
+    //              CDE
+    //              BCDE
+    //              ABCDE
+    public static void printPattern18 (int n) {
+        for(int i=1; i<=n; i++) {
+            int x = 64 + (n - i + 1);
+            for(int j=1; j<=i; j++) {
+                System.out.print((char) x);
+                x++;
+            };
+            x = 64 + (n - i);
+            System.out.println();
+        };
+    };
+
+    //              ******
+    //              **  **
+    //              *    *
+    //              *    *
+    //              **  **
+    //              ******
+    public static void printPattern19(int n) {
+        //  up side
+        for(int i=(n/2); i>=1; i--) {
+            //      left side
+            for(int j=i; j>=1; j--) {
+                System.out.print("*");
+            };
+            // spaces
+            for(int sp=1; sp<=(n/2-i); sp++) {
+                System.out.print(" ");
+            };
+
+            //      right side
+            //  spaces
+            for(int s=1; s<=(n/2-i); s++) {
+                System.out.print(" ");
+            };
+            // stars
+            for(int k=i; k>=1; k--) {
+                System.out.print("*");
+            };
+            System.out.println();
+        };
+        //  down side
+        for(int i=1; i<=(n/2); i++) {
+            //          left side
+            for(int j=1; j<=i; j++) {
+                System.out.print("*");
+            };
+            //  spaces
+            for(int s=1; s<=(n/2-i); s++) {
+                System.out.print(" ");
+            };
+            //          right side
+            //  spaces
+            for(int s=1; s<=(n/2-i); s++) {
+                System.out.print(" ");
+            };
+            // letters
+            for(int j=1; j<=i; j++) {
+                System.out.print("*");
+            };
+            System.out.println();
+        };
+    };
+
+    //              *      *
+    //              **    **
+    //              ***  ***
+    //              ********
+    //              ***  ***
+    //              **    **
+    //              *      *
+
+    //              ******
+    //               
+    //              *    *
+    // 
+    //              *    *
+    //          
+    //              ******
+
+    //              4444444
+    //              4333334
+    //              4322234
+    //              4321234
+    //              4322234
+    //              4333334
+    //              4444444 
 };
