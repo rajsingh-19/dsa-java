@@ -45,8 +45,13 @@ public class Star {
 
         // printPattern18(5);
 
-        printPattern19(6);
+        // printPattern19(6);
 
+        // printPattern20(7);
+
+        printPattern21(7);
+
+        // printPattern22(7);
     };
 
     //          * * * *
@@ -459,6 +464,56 @@ public class Star {
     //              ***  ***
     //              **    **
     //              *      *
+    public static void printPattern20(int n) {
+        //              upper side
+        for(int i=1; i<=(n/2+1); i++) {
+            //  left side
+            // stars
+            for(int j=1; j<=i; j++) {
+                System.out.print("*");
+            };
+            // spaces
+            for(int k=1; k<=(n/2+1-i); k++) {
+                System.out.print(" ");
+            };
+
+            //  right side
+            // spaces
+            for(int j=1; j<=(4-i); j++) {
+                System.out.print(" ");
+            };
+            // stars
+            for(int k=1; k<=i; k++) {
+                System.out.print("*");
+            };
+            System.out.println();
+        };
+
+        //            down side
+        for(int i=(n/2); i>=1; i--) {
+            //  left side
+            // stars
+            for(int j=i; j>=1; j--) {
+                System.out.print("*");
+            };
+            // spaces
+            for(int k=1; k<=(4-i); k++) {
+                System.out.print(" ");
+            };
+
+            //  right side
+            // spaces
+            for(int j=1; j<=(n/2+1-i); j++) {
+                System.out.print(" ");
+            };
+            // stars
+            for(int k=i; k>=1; k--) {
+                System.out.print("*");
+            };
+            System.out.println();
+        };
+        System.out.println();
+    };
 
     //              ******
     //               
@@ -467,6 +522,15 @@ public class Star {
     //              *    *
     //          
     //              ******
+    public static void printPattern21(int n) {
+        // for(int i=1; i<=(n-(n/2)); i++) {
+        //     for(int j=1; j<=n; j++) {
+        //         System.out.print("*");
+        //     };
+        //     System.out.println();
+        //     System.out.println();
+        // };
+    };
 
     //              4444444
     //              4333334
@@ -475,4 +539,17 @@ public class Star {
     //              4322234
     //              4333334
     //              4444444 
+    public static void printPattern22(int n) {
+        // for(int i=1; i<=(n); i++) {
+        //     // left side
+        //     for(int j=1; j<=(n/2+1); j++) {
+        //         System.out.print((n/2+1));
+        //     };
+        //     // right side
+        //     for(int j=1; j<=(n/2); j++) {
+        //         System.out.print(j);
+        //     };
+        //     System.out.println();
+        // };
+    };
 };
